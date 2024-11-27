@@ -1,4 +1,4 @@
-import 'package:cuartaclase/components/todo_tilde.dart';
+import 'package:cuartaclase/components/todo_tile.dart';
 import 'package:flutter/material.dart';
 
 import 'components/dialog_box.dart';
@@ -10,7 +10,7 @@ class Homne extends StatefulWidget {
   State<Homne> createState() => _HomneState();
 }
 
-final _controller = TextEditingController();
+final TextEditingController _controller = TextEditingController();
 
 class _HomneState extends State<Homne> {
   List taskLists = [
@@ -46,6 +46,7 @@ class _HomneState extends State<Homne> {
   // Guardar una nueva tarea.
   void saveNewTask(){
     setState(() {
+
       taskLists.add([_controller.text, false]);
       Navigator.of(context).pop();
       _controller.clear();
